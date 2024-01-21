@@ -1,0 +1,22 @@
+export const COLORS = {
+  White: '#FFFFFF',
+  Haiti: '#2E2739',
+  Solitude: '#F6F6FA',
+  Topaz: '#827D88',
+  MayaBlue: '#61C3F2',
+  WhiteLilac: '#DBDBDF',
+  LightSeaGreen: '#15D2BC',
+  PaleVioletRed: '#E26CA5',
+  GovernorBay: '#564CA3',
+  Gamboge: '#CD9D0F',
+  Tangaroa: '#202C43',
+  SuvaGrey: '#8F8F8F',
+  WhiteSmoke: '#EFEFEF',
+  WhiteSmoke1: '#EFEFEF40',
+  genreBackground: {
+    Action: '#15D2BC',
+    Thriller: '#E26CA5',
+    Science: '#564CA3',
+    Fiction: '#CD9D0F',
+  },
+};
