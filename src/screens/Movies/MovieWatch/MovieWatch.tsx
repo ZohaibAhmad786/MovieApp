@@ -9,9 +9,9 @@ import {COLORS} from '../../../shared/theme/pallete';
 import {IWatchMovie} from '../../../shared/types';
 import {styles} from './MovieWatch.styles';
 import {getUpCommingMovies} from '../../../shared/API';
-import {useSelector} from 'react-redux';
-import store, {RootState} from '../../../shared/redux/store';
-import {setMoviesList} from '../../../shared/redux/watchReducer';
+import { useSelector } from 'react-redux';
+import store, { RootState } from '../../../shared/redux/store';
+import { setMoviesList } from '../../../shared/redux/watchReducer';
 
 type MovieWatchScreenProps = NativeStackScreenProps<
   MovieStackParamsList,
@@ -21,9 +21,7 @@ type MovieWatchScreenProps = NativeStackScreenProps<
 const MovieWatch = (props: MovieWatchScreenProps) => {
   //22d22d403c9d2bc75d6eca691181e097
   // const [data, setData] = React.useState([]);
-  const data = useSelector(
-    (state: RootState) => state.watchMoviesReducer.movies,
-  );
+  const data= useSelector((state:RootState)=>state.watchMovies.movies)
   const insets = useSafeAreaInsets();
 
   React.useEffect(() => {
@@ -33,7 +31,7 @@ const MovieWatch = (props: MovieWatchScreenProps) => {
   const getUpcommingMoviesData = useCallback(async () => {
     try {
       const responseData = await getUpCommingMovies();
-      store.dispatch(setMoviesList(responseData.results));
+    store.dispatch(setMoviesList(responseData.results))
     } catch (error) {
       Alert.alert('Error', error.message);
     }

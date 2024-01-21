@@ -13,7 +13,7 @@ export const watchMoviesReducer = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setMoviesList: (state: State, action: PayloadAction<IWatchMovie[]>) => {
+    setMoviesList: (state: State, action: any) => {
       state.movies = action.payload;
     },
   },
